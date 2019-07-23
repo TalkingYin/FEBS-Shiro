@@ -1,8 +1,10 @@
 package ${basePackage}.${serviceImplPackage};
 
+import cc.mrbird.febs.common.entity.QueryRequest;
 import ${basePackage}.${entityPackage}.${className};
 import ${basePackage}.${mapperPackage}.${className}Mapper;
 import ${basePackage}.${servicePackage}.I${className}Service;
+import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.annotation.Propagation;
