@@ -7,9 +7,12 @@ import cc.mrbird.febs.system.entity.Menu;
 import cc.mrbird.febs.system.mapper.MenuMapper;
 import cc.mrbird.febs.system.mapper.RoleMenuMapper;
 import cc.mrbird.febs.system.service.IMenuService;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
 import com.baomidou.mybatisplus.core.toolkit.StringPool;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import java.util.Arrays;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -90,13 +93,22 @@ public class MenuServiceImpl extends ServiceImpl<MenuMapper, Menu> implements IM
     @Transactional
     public void deleteMeuns(String menuIds) {
         String[] menuIdsArray = menuIds.split(StringPool.COMMA);
-        for (String menuId : menuIdsArray) {
-            // 递归删除这些菜单/按钮
-            this.baseMapper.deleteMenus(menuId);
-            this.roleMenuMapper.deleteRoleMenus(menuId);
-        }
+        this.delete(Arrays.asList(menuIdsArray));
 
         shiroRealm.clearCache();
+    }
+
+    private void delete(List<String> menuIds) {
+        removeByIds(menuIds);
+
+        LambdaQueryWrapper<Menu> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.in(Menu::getParentId, menuIds);
+        List<Menu> menus = baseMapper.selectList(queryWrapper);
+        if (CollectionUtils.isNotEmpty(menus)) {
+            List<String> menuIdList = new ArrayList<>();
+            menus.forEach(m -> menuIdList.add(String.valueOf(m.getMenuId())));
+            this.delete(menuIdList);
+        }
     }
 
     private List<MenuTree<Menu>> convertMenus(List<Menu> menus) {
