@@ -8,13 +8,12 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.wuwenze.poi.annotation.Excel;
 import com.wuwenze.poi.annotation.ExcelField;
+import java.io.Serializable;
+import java.util.Date;
+import javax.servlet.http.HttpServletRequest;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
-
-import javax.servlet.http.HttpServletRequest;
-import java.io.Serializable;
-import java.util.Date;
 
 /**
  * @author MrBird
@@ -43,14 +42,14 @@ public class LoginLog implements Serializable {
      * 登录时间
      */
     @TableField("LOGIN_TIME")
-    @ExcelField("登录时间")
+    @ExcelField(value = "登录时间", writeConverter = TimeConverter.class)
     private Date loginTime;
 
     /**
      * 登录地点
      */
     @TableField("LOCATION")
-    @ExcelField(value = "登录地点", writeConverter = TimeConverter.class)
+    @ExcelField(value = "登录地点")
     private String location;
     /**
      * 登录 IP
@@ -102,14 +101,16 @@ public class LoginLog implements Serializable {
                 if (containIE) {
                     browser = "搜狗" + userAgent.substring(indexOfIE, indexOfIE + "IE x.x".length());
                 } else if (containChrome) {
-                    browser = "搜狗" + userAgent.substring(indexOfChrome, indexOfChrome + "Chrome/xx".length());
+                    browser = "搜狗" + userAgent
+                        .substring(indexOfChrome, indexOfChrome + "Chrome/xx".length());
                 }
             } else if (containChrome) {
                 browser = userAgent.substring(indexOfChrome, indexOfChrome + "Chrome/xx".length());
             } else if (containSafari) {
                 int indexOfSafariVersion = userAgent.indexOf("Version");
                 browser = "Safari "
-                        + userAgent.substring(indexOfSafariVersion, indexOfSafariVersion + "Version/x.x.x.x".length());
+                    + userAgent.substring(indexOfSafariVersion,
+                    indexOfSafariVersion + "Version/x.x.x.x".length());
             } else if (containFF) {
                 browser = userAgent.substring(indexOfFF, indexOfFF + "Firefox/xx".length());
             } else if (containIE) {
@@ -126,7 +127,8 @@ public class LoginLog implements Serializable {
                 os = "Linux";
             } else if (isWindows) {
                 os = "Windows ";
-                String version = userAgent.substring(indexOfWindows + "Windows NT".length(), indexOfWindows
+                String version = userAgent
+                    .substring(indexOfWindows + "Windows NT".length(), indexOfWindows
                         + "Windows NTx.x".length());
                 switch (version.trim()) {
                     case "5.0":
