@@ -12,5 +12,13 @@
     <groupId>org.febs</groupId>
     <artifactId>febs-platform</artifactId>
 
+    <dependencies>
+        <!-- demo功能模块 -->
+        <dependency>
+            <groupId>org.febs</groupId>
+            <artifactId>febs-demo</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
 
 </project>
