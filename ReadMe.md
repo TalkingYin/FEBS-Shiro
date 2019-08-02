@@ -109,20 +109,20 @@ FEBS-Vue | FEBS-Shiro前后端分离版本，前端架构采用Vue全家桶。 |
 ### 系统截图
 
 #### PC端
-![screenshot](screenshot/pc_screenshot_1.jpg)
-![screenshot](screenshot/pc_screenshot_2.jpg)
-![screenshot](screenshot/pc_screenshot_3.jpg)
-![screenshot](screenshot/pc_screenshot_4.jpg)
-![screenshot](screenshot/pc_screenshot_5.jpg)
-![screenshot](screenshot/pc_screenshot_6.jpg)
+![screenshot](docs/screenshot/pc_screenshot_1.jpg)
+![screenshot](docs/screenshot/pc_screenshot_2.jpg)
+![screenshot](docs/screenshot/pc_screenshot_3.jpg)
+![screenshot](docs/screenshot/pc_screenshot_4.jpg)
+![screenshot](docs/screenshot/pc_screenshot_5.jpg)
+![screenshot](docs/screenshot/pc_screenshot_6.jpg)
 
 #### 手机
-![screenshot](screenshot/mobile_screenshot_1.jpg)
-![screenshot](screenshot/mobile_screenshot_2.jpg)
+![screenshot](docs/screenshot/mobile_screenshot_1.jpg)
+![screenshot](docs/screenshot/mobile_screenshot_2.jpg)
 #### Pad
-![screenshot](screenshot/pad_screenshot_1.jpg)
-![screenshot](screenshot/pad_screenshot_2.jpg)
-![screenshot](screenshot/pad_screenshot_3.jpg)
+![screenshot](docs/screenshot/pad_screenshot_1.jpg)
+![screenshot](docs/screenshot/pad_screenshot_2.jpg)
+![screenshot](docs/screenshot/pad_screenshot_3.jpg)
 ### 浏览器兼容
 |[<img src="https://raw.github.com/alrra/browser-logos/master/src/archive/internet-explorer_9-11/internet-explorer_9-11_48x48.png" alt="Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari |[<img src="https://raw.github.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Opera
 | --------- | --------- | --------- | --------- | --------- |--------- |
@@ -146,9 +146,9 @@ FEBS-Vue | FEBS-Shiro前后端分离版本，前端架构采用Vue全家桶。 |
 ### 反馈交流
 加入QQ群和大家一起~~交流~~吹水：
 
-![qq](screenshot/QQ.jpg)
+![qq](docs/screenshot/QQ.jpg)
 ### 支持作者
 如果该系统对您有帮助的话，请作者喝杯肥宅水吧🍺~
 
-![treatme](screenshot/treatme.jpg)
+![treatme](docs/screenshot/treatme.jpg)
 
