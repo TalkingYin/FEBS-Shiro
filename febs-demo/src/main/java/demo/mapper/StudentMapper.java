@@ -1,5 +1,11 @@
 package demo.mapper;
 
-public interface StudentMapper {
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import demo.entity.Student;
+
+/**
+ * @author laodao1990
+ */
+public interface StudentMapper extends BaseMapper<Student> {
 
 }

@@ -27,3 +27,16 @@
 将新创建的数据库添加到spring-boot数据源中.参考[application-demo.yml](../febs-platform/src/main/resources/application-demo.yml)文件.  
 启用示例项目,将[application.yml](../febs-platform/src/main/resources/application.yml)中的`springprofiles.active`改为`demo`即可.  
 
+### 2. 生成工程代码
+
+#### 2.1 entity
+
+#### 2.2 mapper
+
+mapper.xml的扫描路径在`application.yml`中配置了,按照相应路径创建xml文件.  
+或者修改`mybatis-plus.mapper-locations`配置.
+
+#### 2.3 service
+
+#### 2.4 controller
+
